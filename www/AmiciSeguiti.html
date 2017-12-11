@@ -29,20 +29,16 @@
 
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6RVz6n4IVmNS5D-8xoutlzABPWl5jNbY&callback=myMap"></script>
 
-            <div id="bottone">
-                <form>
-                    <input type="image" src="300ppi/Profilo.png" width="50dp"
-                           height="50dp">
-                </form>
+            <div id="bottone" >
+                <img style="weight: 50px; height: 50px;" src="300ppi/Profilo.png">
             </div>
 
-    </body>
+            <script>
+                $('#bottone').click(function() {
+                   location.href="Profilo.html";
+                });
+            </script>
 
-    <script>
-        $("#bottone").click(function () {
-            console.log("funzione click");
-            document.location.href="www/Profilo.html";
-        });
-    </script>
+    </body>
 
 </html>
