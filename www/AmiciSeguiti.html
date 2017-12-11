@@ -11,17 +11,17 @@
         <link rel="stylesheet" href="css/AmiciSeguiti.css" type="text/css" />
 
     <body>
-        <!-- commento prova -->
+
         <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid"><div class="navbar-header">
         <a class="navbar-brand" href="#">GeoPost</a>
             <script>
                 function myMap() {
-                var mapProp= {
-                    center:new google.maps.LatLng(51.508742,-0.120850),
-                    zoom:5,
-                };
-                var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    var mapProp= {
+                        center:new google.maps.LatLng(51.508742,-0.120850),
+                        zoom:5,
+                    };
+                    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
                 }
             </script>
 
@@ -29,6 +29,20 @@
 
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6RVz6n4IVmNS5D-8xoutlzABPWl5jNbY&callback=myMap"></script>
 
+            <div id="bottone">
+                <form>
+                    <input type="image" src="300ppi/Profilo.png" width="50dp"
+                           height="50dp">
+                </form>
+            </div>
+
     </body>
+
+    <script>
+        $("#bottone").click(function () {
+            console.log("funzione click");
+            document.location.href="www/Profilo.html";
+        });
+    </script>
 
 </html>

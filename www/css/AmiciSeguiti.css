@@ -5,6 +5,7 @@ html {
 .navbar-default {
     background-color: #2256A6;
     border-color: #2256A6;
+    display: block;
 }
 
 #lista {
@@ -19,3 +20,15 @@ html {
     left:80px;
     top:20px;
 }
+
+#bottone {
+    position: absolute;
+    right: 30px;
+    top: 68%;
+
+}
+
+#googleMap {
+    position: relative;
+}
+
