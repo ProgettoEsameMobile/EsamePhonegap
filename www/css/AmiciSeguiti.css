@@ -13,7 +13,7 @@ html {
     height:50px;
     background:url(immagine.jpg);
     position:relative;
-    }
+}
 
 #lista a{
     position:absolute;
@@ -21,9 +21,30 @@ html {
     top:20px;
 }
 
-#bottone {
+#bProfilo {
     position: absolute;
     right: 30px;
+    top: 68%;
+
+}
+
+#bStato {
+    position: absolute;
+    right: 100px;
+    top: 68%;
+
+}
+
+#bFollow {
+    position: absolute;
+    right: 30px;
+    top: 60%;
+
+}
+
+#bLista {
+    position: absolute;
+    left: 30px;
     top: 68%;
 
 }
@@ -31,4 +52,3 @@ html {
 #googleMap {
     position: relative;
 }
-

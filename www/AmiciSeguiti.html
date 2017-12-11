@@ -29,13 +29,44 @@
 
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6RVz6n4IVmNS5D-8xoutlzABPWl5jNbY&callback=myMap"></script>
 
-            <div id="bottone" >
+            <div id="bStato" >
+                <img style="weight: 50px; height: 50px;" src="300ppi/Stato.png">
+            </div>
+
+            <div id="bFollow" >
+                <img style="weight: 50px; height: 50px;" src="300ppi/AggAmico.png">
+            </div>
+
+            <div id="bLista" >
+                <img style="weight: 50px; height: 50px;" src="300ppi/Lista.png">
+            </div>
+
+            <div id="bProfilo" >
                 <img style="weight: 50px; height: 50px;" src="300ppi/Profilo.png">
             </div>
 
+
             <script>
-                $('#bottone').click(function() {
-                   location.href="Profilo.html";
+                $('#bProfilo').click(function() {
+                    location.href="Profilo.html";
+                });
+            </script>
+
+            <script>
+                $('#bStato').click(function() {
+                    location.href="AggiungiStato.html";
+                });
+            </script>
+
+            <script>
+                $('#bFollow').click(function() {
+                    location.href="AggiungiAmici.html";
+                });
+            </script>
+
+            <script>
+                $('#bLista').click(function() {
+                    location.href="Lista.html";
                 });
             </script>
 
