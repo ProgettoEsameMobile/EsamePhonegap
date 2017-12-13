@@ -48,10 +48,15 @@ html {
 }
 
 #bLista {
+     position: absolute;
+     left: 30px;
+     top: 68%;
+}
+
+#bMappa {
     position: absolute;
     left: 30px;
     top: 68%;
-
 }
 
 #bBack {
