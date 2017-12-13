@@ -1,0 +1,17 @@
+.navbar-default {
+    background-color: #2256A6;
+    border-color: #2256A6;
+    display: block;
+}
+
+.navbar-brand {
+    left: 70px;
+    position: relative;
+}
+
+#bBack {
+    position: absolute;
+    left: 20px;
+    height: 30px;
+    width: 30px;
+}

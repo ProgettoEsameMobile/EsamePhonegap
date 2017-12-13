@@ -54,6 +54,11 @@ html {
 
 }
 
+#bBack {
+    position: absolute;
+    left: 30px;
+}
+
 #googleMap {
     position: relative;
 }
