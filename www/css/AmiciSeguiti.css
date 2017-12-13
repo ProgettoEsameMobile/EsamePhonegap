@@ -24,22 +24,27 @@ html {
 #bProfilo {
     position: absolute;
     right: 30px;
-    top: 68%;
-
+    top: 60%;
+    display: none;
 }
 
 #bStato {
     position: absolute;
     right: 100px;
     top: 68%;
-
 }
 
 #bFollow {
     position: absolute;
     right: 30px;
-    top: 60%;
+    top: 52%;
+    display: none;
+}
 
+#bMenu {
+    position: absolute;
+    right: 30px;
+    top: 68%;
 }
 
 #bLista {

@@ -29,6 +29,10 @@
 
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6RVz6n4IVmNS5D-8xoutlzABPWl5jNbY&callback=myMap"></script>
 
+            <div id="bMenu" >
+                <img style="weight: 50px; height: 50px;" src="300ppi/Menu.png">
+            </div>
+
             <div id="bStato" >
                 <img style="weight: 50px; height: 50px;" src="300ppi/Stato.png">
             </div>
@@ -67,6 +71,22 @@
             <script>
                 $('#bLista').click(function() {
                     location.href="Lista.html";
+                });
+            </script>
+
+            <script>
+
+                $('#bMenu').click(function() {
+                    if ((document.getElementById("bProfilo").style.display == "block")) {
+                        console.log("Apri tendina");
+                        document.getElementById("bProfilo").style.display = "none"
+                        document.getElementById("bFollow").style.display = "none"
+                    }
+                    else {
+                        console.log("Chiudi tendina");
+                        document.getElementById("bProfilo").style.display = "block"
+                        document.getElementById("bFollow").style.display = "block"
+                    }
                 });
             </script>
 
