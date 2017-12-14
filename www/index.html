@@ -7,9 +7,10 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
 		<link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.css">
 
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 
 			$(document).ready(function(){
 
@@ -28,7 +29,7 @@
 							console.log("status: "+ status);
 							if (status) {
 								$("#session_id").html(data);
-								session = ("#session_id").html(data);
+								location.href="AmiciSeguiti.html";
 
                             } else
 								alert("Controlla la connessione a internet!");
@@ -37,7 +38,7 @@
 				}); // button
 
 			});
-		</script>
+		</script>-->
 
 		<style type="text/css">
     		html {
@@ -66,6 +67,9 @@
                                 <button id="button" class="btn btn-block btn-success">Login</button> <br/>
         		        <p>session_id: <div id="session_id"></div></p>
                         </div>
+
+            <button><a href="" onclick="login()">Premi</a></button>
+
 
 		</div>
 
