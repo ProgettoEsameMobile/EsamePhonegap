@@ -11,15 +11,6 @@
 
 		<script type="text/javascript">
 
-            var session;
-            function Singleton(session) {
-                this.session_id = session;
-            }
-
-            Singleton.prototype.pushId = function(){
-                return this.session.push(session_id);
-            }
-
 			$(document).ready(function(){
 
 				$("#button").click(function(){
@@ -46,11 +37,6 @@
 				}); // button
 
 			});
-
-            var session1 = ("#session_id").html(data);
-			var singleton = new Singleton(session1);
-			glob(singleton);
-
 		</script>
 
 		<style type="text/css">
