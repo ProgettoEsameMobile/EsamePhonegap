@@ -10,6 +10,16 @@
 		<link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.css">
 
 		<script type="text/javascript">
+
+            var session;
+            function Singleton(session) {
+                this.session_id = session;
+            }
+
+            Singleton.prototype.pushId = function(){
+                return this.session.push(session_id);
+            }
+
 			$(document).ready(function(){
 
 				$("#button").click(function(){
@@ -27,7 +37,8 @@
 							console.log("status: "+ status);
 							if (status) {
 								$("#session_id").html(data);
-                                location.href="AmiciSeguiti.html";
+								session = ("#session_id").html(data);
+
                             } else
 								alert("Controlla la connessione a internet!");
 						});
@@ -35,6 +46,11 @@
 				}); // button
 
 			});
+
+            var session1 = ("#session_id").html(data);
+			var singleton = new Singleton(session1);
+			glob(singleton);
+
 		</script>
 
 		<style type="text/css">

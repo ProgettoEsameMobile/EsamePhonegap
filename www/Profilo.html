@@ -11,6 +11,33 @@
     <link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.css">
     <link rel="stylesheet" href="css/Profilo.css" type="text/css" />
 
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#bLogout").click(function(){
+                console.log("div logout");
+                console.log("session id: "+$("#session_id").val());
+
+
+                $.get("https://ewserver.di.unimi.it/mobicomp/geopost/logout",
+                    {
+                        session: $("#session_id").val()
+                    },
+                    function(session){
+                        console.log("session: " + session);
+                        if (session) {
+                            $("#session_id").html(data);
+                            location.href="index.html";
+                        } else
+                            alert("Logout non disponibile");
+                    });
+
+            });
+
+        });
+    </script>
+
+</head>
 <body>
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -21,11 +48,17 @@
                 <img src="300ppi/Back.png">
             </div>
 
+            <div id="bLogout" >
+                <h4>Logout</h4>
+            </div>
+
             <script>
                 $('#bBack').click(function() {
                     location.href="AmiciSeguiti.html";
                 });
             </script>
+
+
 
 
 </body>

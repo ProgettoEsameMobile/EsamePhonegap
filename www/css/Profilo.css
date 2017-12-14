@@ -15,3 +15,11 @@
     height: 20px;
     width: 20px;
 }
+
+#bLogout {
+    position: absolute;
+    margin-top: 5px;
+    right: 70px;
+    height: 20px;
+    width: 20px;
+}
