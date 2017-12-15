@@ -24,23 +24,27 @@
     width: 20px;
 }
 
-/*TEXT AREA USER / STATO*/
+/*TEXT AREA STATO*/
 #areaStato {
     margin-top: 100px;
 }
 
-#taStato, #taUser {
+#taStato {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#taStato {
-    margin-top: 30px;
+#bPubblica { margin-top: 50px; }
+
+#imgPub {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #googleMap {
-    margin-top: 75px;
+    margin-top: 50px;
     width: 100%;
     height: 325px;
 }
