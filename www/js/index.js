@@ -26,21 +26,25 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     $("#bLogout").click(function(){
+
+        session = $("#session_id").html(data);
         console.log("div logout");
-        console.log("session id: "+$("#session_id").val());
+        console.log("session id: "+ session);
 
 
         $.get("https://ewserver.di.unimi.it/mobicomp/geopost/logout",
             {
                 session: $("#session_id").val()
             },
-            function(session){
-                console.log("session: " + session);
-                if (session) {
-                    $("#session_id").html(data);
-                    location.href="index.html";
+            function(data, status){
+                console.log("data: "+ data);
+                console.log("status: "+ status);
+                if (status) {
+                    session = $("#session_id").html(data);
+                    location.href="AmiciSeguiti.html";
+
                 } else
-                    alert("Logout non disponibile");
+                    alert("Controlla la connessione a internet!");
             });
 
     }); // button
