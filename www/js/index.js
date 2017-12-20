@@ -1,6 +1,6 @@
-
-
 $(document).ready(function(){
+
+    localStorage.setItem("session", null);
 
     $("#button").click(function(){
         console.log("button");
