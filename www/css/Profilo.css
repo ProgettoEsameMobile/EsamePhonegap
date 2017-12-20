@@ -29,6 +29,10 @@
     margin-top: 100px;
 }
 
+#stato {
+    margin-left: 25%;
+}
+
 #taStato, #taUser {
     display: block;
     margin-left: auto;

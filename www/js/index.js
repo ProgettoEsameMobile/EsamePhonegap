@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    localStorage.setItem("session", null);
-
     $("#button").click(function(){
         console.log("button");
         console.log("username: "+$("#username").val());
@@ -42,6 +40,29 @@ $(document).ready(function(){
                 if (status) {
                     localStorage.setItem("session", null);
                     location.href="index.html";
+
+                } else
+                    alert("Controlla la connessione a internet!");
+            });
+
+    }); // button
+
+
+    $("#bPubblica").click(function(){
+
+        console.log("div pubblica");
+        console.log("session id: "+ localStorage.getItem("session"));
+
+        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/followed?session_id=",
+            {
+                session: localStorage.getItem("session"),
+                stato: $("#message").val()
+            },
+            function(data, status){
+                console.log("data: "+ data);
+                console.log("status: "+ status);
+                if (status) {
+                    localStorage.setItem("stato", stato);
 
                 } else
                     alert("Controlla la connessione a internet!");

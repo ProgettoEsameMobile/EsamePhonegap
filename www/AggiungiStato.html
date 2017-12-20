@@ -9,6 +9,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.css">
+        <script type="text/javascript" src="js/index.js"></script>
         <link rel="stylesheet" href="css/AggiungiStato.css" type="text/css" />
     <body>
 
@@ -30,19 +31,13 @@
         </nav>
 
         <div id="areaStato">
-            <textarea rows="4" cols="40" id="taStato">
-                Prova testo
-            </textarea>
+            <div id="textStato">
+                <input type="text" id="message" placeholder="Scrivi il tuo stato..." required="" size="30">
+            </div>
 
             <div id="bPubblica" >
                 <img id="imgPub" style="weight: 50px; height: 50px;" src="300ppi/pubblica.png">
             </div>
-
-            <script>
-                $('bPubblica').click(function() {
-                    location.href="AmiciSeguiti.html";
-                });
-            </script>
 
         </div>
 
