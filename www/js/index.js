@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 
     $("#button").click(function(){
@@ -14,34 +16,32 @@ $(document).ready(function(){
                 console.log("data: "+ data);
                 console.log("status: "+ status);
                 if (status) {
-                    var session = $("#session_id").html(data);
+                    session = $("#session_id").html(data);
+                    console.log($("#session_id").html(data));
+                    localStorage.setItem("session", data);
+                    console.log("session prova" + data);
                     location.href="AmiciSeguiti.html";
 
                 } else
                     alert("Controlla la connessione a internet!");
             });
     }); // button
-});
 
-$(document).ready(function(){
 
     $("#bLogout").click(function(){
 
-        session = $("#session_id").html(data);
         console.log("div logout");
-        console.log("session id: "+ session);
+        console.log("session id: "+ localStorage.getItem("session"));
 
 
-        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/logout",
-            {
-                session: $("#session_id").val()
-            },
+        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/logout?session_id=" + localStorage.getItem("session"),
+
             function(data, status){
                 console.log("data: "+ data);
                 console.log("status: "+ status);
                 if (status) {
-                    session = $("#session_id").html(data);
-                    location.href="AmiciSeguiti.html";
+                    localStorage.setItem("session", null);
+                    location.href="index.html";
 
                 } else
                     alert("Controlla la connessione a internet!");
