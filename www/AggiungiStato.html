@@ -11,6 +11,25 @@
         <link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.css">
         <script type="text/javascript" src="js/index.js"></script>
         <link rel="stylesheet" href="css/AggiungiStato.css" type="text/css" />
+
+        <script>
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(mia_posizione);
+            }else{
+                alert("La geo-localizzazione NON è possibile");
+            }
+
+            function mia_posizione(position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                document.getElementById("posizione").innerHTML = "La tua posizione: " + lat + "," + lon;
+                console.log("posizione: " + lat + ", " + lon);
+                localStorage.setItem("lat", lat);
+                localStorage.setItem("lon", lon);
+            }
+        </script>
+    </head>
+
     <body>
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -52,6 +71,7 @@
             }
         </script>
 
+        <div id="posizione"></div>
         <div id="googleMap"></div>
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6RVz6n4IVmNS5D-8xoutlzABPWl5jNbY&callback=myMap"></script>

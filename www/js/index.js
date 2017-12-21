@@ -10,18 +10,18 @@ $(document).ready(function(){
                 username: $("#username").val(),
                 password: $("#password").val()
             },
-            function(data, status){
+                function(data, status){
                 console.log("data: "+ data);
                 console.log("status: "+ status);
                 if (status) {
-                    session = $("#session_id").html(data);
+                    session_id = $("#session_id").html(data);
                     console.log($("#session_id").html(data));
-                    localStorage.setItem("session", data);
+                    localStorage.setItem("session_id", data);
                     console.log("session prova" + data);
                     location.href="AmiciSeguiti.html";
 
                 } else
-                    alert("Controlla la connessione a internet!");
+                    alert("Controlla connessione! (Login)");
             });
     }); // button
 
@@ -29,20 +29,20 @@ $(document).ready(function(){
     $("#bLogout").click(function(){
 
         console.log("div logout");
-        console.log("session id: "+ localStorage.getItem("session"));
+        console.log("session_id: "+ localStorage.getItem("session_id"));
 
 
-        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/logout?session_id=" + localStorage.getItem("session"),
+        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/logout?session_id=" + localStorage.getItem("session_id"),
 
             function(data, status){
                 console.log("data: "+ data);
                 console.log("status: "+ status);
                 if (status) {
-                    localStorage.setItem("session", null);
+                    localStorage.setItem("session_id", null);
                     location.href="index.html";
 
                 } else
-                    alert("Controlla la connessione a internet!");
+                    alert("Controlla connessione! (Logout)");
             });
 
     }); // button
@@ -51,23 +51,27 @@ $(document).ready(function(){
     $("#bPubblica").click(function(){
 
         console.log("div pubblica");
-        console.log("session id: "+ localStorage.getItem("session"));
+        console.log("stato: "+$("#message").val());
+        console.log("session: " + localStorage.getItem("session_id"));
 
-        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/followed?session_id=",
+        $.get("https://ewserver.di.unimi.it/mobicomp/geopost/status_update?",
             {
-                session: localStorage.getItem("session"),
-                stato: $("#message").val()
+                session_id: localStorage.getItem("session_id"),
+                stato: $("#message").val(),
+                lat: localStorage.getItem("lat"),
+                lon: localStorage.getItem("lon")
             },
             function(data, status){
+                console.log("posizione: " + localStorage.getItem("lat") + ", " + localStorage.getItem("lon"));
                 console.log("data: "+ data);
                 console.log("status: "+ status);
                 if (status) {
-                    localStorage.setItem("stato", stato);
-
+                    console.log("stato in local: " + $("#message").val());
+                    localStorage.setItem("stato", JSON.stringify($("#message").val()));
+                    location.href="AmiciSeguiti.html";
                 } else
-                    alert("Controlla la connessione a internet!");
+                    alert("Controlla connessione! (Pubblica)");
             });
-
     }); // button
 
 });
