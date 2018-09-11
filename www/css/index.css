@@ -1,10 +1,12 @@
 html {
     padding-top: 60px;
+    height: 100%;
 }
 
 .navbar-default {
     background-color: #2256A6;
     border-color: #2256A6;
+    display: block;
 }
 
 #imglogo {
@@ -20,7 +22,7 @@ html {
     position: relative;
 }
 
-img {
+.img {
     position: absolute;
     margin: auto;
     top: 0;
@@ -41,3 +43,73 @@ img {
     background-color: #2256A6;
     border-color: #2256A6;
 }
+
+#login{
+    display: block;
+    padding: 5%;
+}
+
+#amiciseguiti{
+    display: none;
+}
+
+#lista {
+    width:100px;
+    height:50px;
+    background:url(immagine.jpg);
+    position:relative;
+}
+
+#lista a{
+    position:absolute;
+    left:80px;
+    top:20px;
+}
+
+#bProfilo {
+    position: absolute;
+    right: 5%;
+    bottom: 12%;
+    display: none;
+}
+
+#bStato {
+    position: absolute;
+    right: 22%;
+    bottom: 2%;
+}
+
+#bFollow {
+    position: absolute;
+    right: 5%;
+    bottom: 22%;
+    display: none;
+}
+
+#bMenu {
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+}
+
+#bLista {
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+}
+
+#bMappa {
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+}
+
+#bBack {
+    position: absolute;
+    left: 30px;
+}
+
+#googleMap {
+    position: relative;
+}
+

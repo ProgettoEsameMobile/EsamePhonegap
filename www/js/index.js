@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     $("#button").click(function(){
+        var stato = $('.login').css('display');
         console.log("button");
         console.log("username: "+$("#username").val());
         console.log("password: "+$("#password").val());
@@ -18,7 +19,9 @@ $(document).ready(function(){
                     console.log($("#session_id").html(data));
                     localStorage.setItem("session_id", data);
                     console.log("session prova" + data);
-                    location.href="AmiciSeguiti.html";
+                    $('#amiciseguiti').css('display','block');
+                    $('#login').css('display','none');
+                    //location.href="AmiciSeguiti.html";
 
                 } else
                     alert("Controlla connessione! (Login)");
