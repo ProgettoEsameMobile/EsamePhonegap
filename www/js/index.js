@@ -51,6 +51,37 @@ $(document).ready(function(){
     }); // button
 
 
+    $('#bProfilo').click(function() {
+        location.href="Profilo.html";
+    });
+
+
+    $('#bStato').click(function() {
+        location.href="AggiungiStato.html";
+    });
+
+    $('#bFollow').click(function() {
+        location.href="AggiungiAmici.html";
+    });
+
+    $('#bLista').click(function() {
+        location.href="Lista.html";
+    });
+
+
+    $('#bMenu').click(function() {
+        if ((document.getElementById("bProfilo").style.display == "block")) {
+            console.log("Chiudi tendina");
+            document.getElementById("bProfilo").style.display = "none"
+            document.getElementById("bFollow").style.display = "none"
+        }
+        else {
+            console.log("Apri tendina");
+            document.getElementById("bProfilo").style.display = "block"
+            document.getElementById("bFollow").style.display = "block"
+        }
+    });
+
     $("#bPubblica").click(function(){
 
         console.log("div pubblica");
